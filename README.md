@@ -1,2 +1,2 @@
 # Web-Design
-Personal Portfolio project
+Personal Portfolio project I created during my time at Indiana University
