@@ -1,0 +1,345 @@
+/* apply a natural box layout model to all elements */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* General */
+body {
+  background-color: #7aefff;
+  color: white;
+  display: flex;
+  flex-direction: column; /* creates rows out of the elements main and footer */
+  margin:0;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em 1em;
+  }
+
+/* Typography */
+h1 {
+font-family: 'Signika', sans-serif;
+font-size: 42px;
+text-shadow: 1px 2px #d3d3d3;
+}
+
+h2 {
+  font-family: 'Signika', sans-serif;
+  font-size: 32px;
+}
+
+h3, p, a, ul, li, address {
+  font-family: 'Kreon', serif;
+  font-size: 16px;
+}
+
+
+/* Navigation */
+nav {
+  background:  #008080;
+  height: 100px;
+
+}
+
+.logo img {
+  width: 225px;
+}
+
+
+nav p {
+  display: inline-block;
+  padding: 10px;
+}
+
+nav .container{
+  padding: 0.5em;
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #7aefff;
+  font-size: 12px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main page header */
+header {
+  background: linear-gradient(to bottom, #00f5ad, #7aefff);
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  width: 80%;
+}
+
+header h1 {
+  font-size: 56px;
+  font-weight: bolder;
+  padding-right: 15px;
+  float: left;
+}
+
+header .name {
+  width: 50%;
+   right: 0px;
+   height: 100%;
+}
+
+header img {
+   border-radius: 50%;
+   border: 3px solid #172fff;
+}
+
+header .photo {
+  height: 100%;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.photo img {
+  margin: 0 auto;
+}
+
+header .quote {
+  float: left;
+  font-size: 24px;
+  padding-left: 60px;
+}
+
+
+/* Footer */
+footer {
+  background: #008080;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer address {
+  font-style: normal;
+  line-height: 1.3em;
+}
+
+footer p {
+  text-align: center;
+}
+/* Social media icons */
+
+footer .socials a {
+  color: #d3d3d3;
+  opacity: .85;
+}
+
+/* Projects page */
+/*
+    IMAGES
+*/
+img {
+  width: 100%;
+  display: block;
+}
+
+/*
+  GALLERY
+*/
+.gallery {
+  /* flex container for the images */
+  display: flex;
+  flex-flow: row wrap;
+  /* center (horz) */
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.item {
+  margin: 0.5em;
+}
+
+.gallery a {
+  text-decoration: none;
+  color: white;
+}
+
+.gallery figure:hover {
+  opacity: 0.90;
+}
+
+.gallery figure {
+  margin: 0 1.0em 2.0em;
+  padding: 1.0em;
+  background-color: #00f5ad;
+  border: thin solid #ddd;
+  box-shadow: 2px 4px 5px #172fff;
+}
+
+.gallery figure img {
+  width: 300px;
+  height: 300px;
+}
+
+.gallery figcaption {
+  padding-top: 0.5em;
+  font-family: 'Kreon', serif;
+  font-size: 18px;
+  max-width: 300px;
+}
+
+/* Resume/Cover letter page */
+.container iframe {
+  border: 3px solid #172fff;
+}
+
+.coverletter {
+  background-color: #00f5ad;
+    padding: 1em 2em 1em;
+    margin-top: 1em;
+}
+
+.coverletter p {
+  font-size: 24px;
+  color: black;
+}
+
+/* Interests page */
+.interests .subtitle {
+  color: black;
+  padding-bottom: 10px;
+}
+
+.interests section {
+display: flex;
+flex-direction: column;
+flex-flow: row wrap;
+justify-content: center;
+}
+
+.interests figure {
+margin: 0 0.5em 1.0em;
+padding: 0;
+border-radius: 5px;
+background: linear-gradient(to bottom, #d3d3d3, #6d6969);
+flex: 1 0 250px;
+max-width: 100%;
+border: 5px solid #00f5ad;
+}
+
+.interests img {
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.interests img:hover {
+opacity: 0.9;
+}
+
+figcaption {
+margin: 0.5em;
+text-align: left;
+padding-left: 0.5em;
+font-size: 18px;
+font-weight: bold;
+color: black
+}
+
+.interests p {
+  margin: 8px;
+}
+
+/* Skills/About me section */
+.aboutme {
+  background: #00f5ad;
+}
+
+.aboutme p {
+  font-size: 20px;
+  color: black;
+}
+/* progress bars */
+
+.w3-light-grey .w3-round-xlarge {
+  border: 3px solid #00f5ad;
+}
+
+.container p {
+  text-align: left;
+  padding-left: 5px;
+}
+
+
+
+/* Media queries */
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header .quote {
+    padding-right: 70px;
+  }
+
+  .container iframe {
+    width: 100%;
+  }
